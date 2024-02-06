@@ -1,12 +1,10 @@
 html {
   box-sizing: border-box;
-  background: linear-gradient(135deg, #81c784, #f06292);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #81c784, #f06292);
 }
 
 .song {
@@ -43,33 +41,48 @@ body {
   font-size: 3rem;
 }
 
+
 .four .text-box {
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  margin: 0 auto;
-  padding: 10px;
-  position: relative;
-  width: 600px;
+  background-color: #ffffff; /* Белый фон для блока сообщений */
+  border-radius: 20px; /* Закругление углов */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для блока */
+  display: flex; /* Включаем flexbox */
+  flex-direction: column; /* Колонный flexbox */
+  margin: 0 auto; /* Автоматические отступы для центрирования */
+  max-width: 500px; /* Максимальная ширина */
+  padding: 20px; /* Внутренние отступы */
+  position: relative; /* Для позиционирования элементов */
 }
 
-.text-box p {
-  margin: 0;
-  text-align: left;
-}
-
-.text-box span {
-  visibility: hidden;
+.text-box .hbd-chatbox {
+  background-color: #f0f0f0; /* Светлый фон для сообщений */
+  border-radius: 18px; /* Закругление углов сообщений */
+  padding: 15px; /* Отступы внутри сообщений */
+  margin-bottom: 15px; /* Отступ между сообщениями */
+  text-align: left; /* Выравнивание текста по левому краю */
+  align-self: flex-start; /* Выравнивание блока сообщений к началу */
 }
 
 .text-box .fake-btn {
-  background-color: rgb(21, 161, 237);
-  border-radius: 3px;
-  bottom: -50px;
-  color: #fff;
-  padding: .5rem 1rem;
-  position: absolute;
-  right: 5px;
+  background-color: #007bff; /* Цвет кнопки */
+  color: #ffffff; /* Цвет текста кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 18px; /* Закругляем углы кнопки */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  align-self: flex-end; /* Выравнивание кнопки к концу */
+  cursor: pointer; /* Курсор в виде руки для кнопки */
+  margin-top: 10px; /* Отступ сверху для кнопки */
+  text-transform: uppercase; /* Все буквы заглавные */
 }
+@media print {
+  .hbd-chatbox {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    color: black !important;
+  }
+}
+
+
 
 .five p {
   font-size: 2rem;
